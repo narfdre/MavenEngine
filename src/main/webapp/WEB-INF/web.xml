@@ -7,12 +7,24 @@
     <listener>
         <listener-class>co.ohba.MavenEngine.GuiceConfig</listener-class>
     </listener>
+
+    <servlet>
+        <servlet-name>NoJersey</servlet-name>
+        <servlet-class>co.ohba.MavenEngine.NoJersey</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoJersey</servlet-name>
+        <url-pattern>/nojersey</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>DIFilter</filter-name>
         <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>DIFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/api/*</url-pattern>
     </filter-mapping>
+
+
 </web-app>

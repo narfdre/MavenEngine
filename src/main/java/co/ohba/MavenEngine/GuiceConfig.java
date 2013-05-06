@@ -20,7 +20,7 @@ public class GuiceConfig extends GuiceServletContextListener {
                 Map<String, String> params = new HashMap<String,String>();
                 params.put(PackagesResourceConfig.PROPERTY_PACKAGES, co.ohba.MavenEngine.resources.TestResource.class.getPackage().getName());
 
-                serve("/*").with(GuiceContainer.class, params);
+                serve("/api/*").with(GuiceContainer.class, params);
             }
         });
     }
